@@ -12,12 +12,14 @@
             --hacker-green: #00ff00;
             --hacker-red: #ff0033;
             --hacker-blue: #0066ff;
-            --matrix-bg: #000000;
+            --matrix-bg-black: #000000;
+            --hacker-orange: #ff8a1f;
+            --matrix-bg: "https://th.bing.com/th/id/R.e8d5da8d9a77efcde2249d0a32be3f2e?rik=uGx%2fW6dnBxxJkw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2ff%2f7%2f0%2f1087373-full-size-dark-wallpaper-1080p-3840x2160-smartphone.jpg&ehk=uPrjgtMmG%2f5ORrIus2msYo6Fiha6n3C6BZlos7z8%2fA4%3d&risl=&pid=ImgRaw&r=0";
         }
         
         body {
             font-family: 'Share Tech Mono', monospace;
-            background-color: var(--matrix-bg);
+            background-image: url("https://th.bing.com/th/id/R.e8d5da8d9a77efcde2249d0a32be3f2e?rik=uGx%2fW6dnBxxJkw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2ff%2f7%2f0%2f1087373-full-size-dark-wallpaper-1080p-3840x2160-smartphone.jpg&ehk=uPrjgtMmG%2f5ORrIus2msYo6Fiha6n3C6BZlos7z8%2fA4%3d&risl=&pid=ImgRaw&r=0");
             color: var(--hacker-green);
             margin: 0;
             padding: 0;
@@ -34,6 +36,11 @@
         .red-text {
             color: var(--hacker-red);
             text-shadow: 0 0 5px var(--hacker-red);
+        }
+
+        .orange-text {
+            color: var(--hacker-orange);
+            text-shadow: 0 0 5px var(--hacker-orange);
         }
         
         .blue-text {
@@ -150,17 +157,17 @@
 <body class="relative">
     <div id="login-screen" class="fixed inset-0 flex items-center justify-center z-50">
         <div class="login-box p-8 rounded-lg w-96">
-            <h1 class="text-3xl mb-6 text-center matrix-text">CYBER SECURITY TOOL v4.2</h1>
+            <h1 class="text-3xl mb-6 text-center matrix-text">BRUTEFORCE HACKING TOOL v3.1.0</h1>
             <p class="mb-4 matrix-text">SECURE ACCESS REQUIRED</p>
             <div class="mb-4">
                 <label class="block matrix-text mb-2">USERNAME</label>
-                <input type="text" id="username" class="w-full p-2 bg-black border border-green-500 matrix-text" value="Administrator Access" readonly>
+                <input type="text" id="username" class="rounded-lg w-full p-2 bg-black border border-green-500 matrix-text" value="Administrator Access" readonly>
             </div>
             <div class="mb-6">
                 <label class="block matrix-text mb-2">PASSWORD</label>
-                <input type="password" id="password" class="w-full p-2 bg-black border border-green-500 matrix-text" placeholder="Password input...">
+                <input type="password" id="password" class="rounded-lg w-full p-2 bg-black border border-green-500 matrix-text" placeholder="Password input...">
             </div>
-            <button id="login-btn" class="w-full py-2 bg-green-900 hover:bg-green-800 matrix-text font-bold">AUTHENTICATE</button>
+            <button id="login-btn" class="rounded-lg w-full py-2 bg-green-900 hover:bg-green-800 matrix-text font-bold">AUTHENTICATE</button>
             <p class="text-xs mt-4 matrix-text text-center">WARNING: UNAUTHORIZED ACCESS WILL BE REPORTED</p>
         </div>
     </div>
@@ -168,27 +175,27 @@
     <div id="main-interface" class="hidden h-screen flex flex-col p-4">
         <div class="flex justify-between items-center mb-4">
             <div>
-                <h1 class="text-xl matrix-text">CYBER SECURITY TOOL <span class="red-text">v4.2</span></h1>
-                <p class="text-xs matrix-text">SYSTEM STATUS: <span class="blue-text">SECURE</span> | USER: <span class="blue-text">admin</span> | ACCESS: <span class="blue-text">ROOT</span></p>
+                <h1 class="text-xl orange-text">CYBER SECURITY TOOL <span class="matrix-text">v4.2</span></h1>
+                <p class="text-xs matrix-text">SYSTEM STATUS: <span class="blue-text">SECURE</span> | USER: <span class="blue-text">Administrator</span> | ACCESS: <span class="blue-text">ROOT</span></p>
             </div>
             <div class="flex space-x-2">
-                <button id="panic-btn" class="px-4 py-1 red-text border border-red-500 hover:bg-red-900">PANIC</button>
-                <button id="clear-btn" class="px-4 py-1 matrix-text border border-green-500 hover:bg-green-900">CLEAR</button>
+                <button id="panic-btn" class="px-4 py-1 red-text border border-red-500 hover:bg-red-900">CALCULATE</button>
+                <button id="clear-btn" class="px-4 py-1 matrix-text border border-green-500 hover:bg-green-900">CLEAR CONSOLE</button>
             </div>
         </div>
 
         <div class="flex flex-1 overflow-hidden">
             <div class="w-1/4 pr-4 flex flex-col">
-                <h2 class="text-lg mb-2 matrix-text rounded-sm bg-red-500">TOOLS</h2>
+                <h2 class="text-lg mb-2 matrix-text">TOOLS</h2>
                 <div class="space-y-2 overflow-y-auto flex-1">
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="wifi">BRUTE FORCE WIFI</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="ddos">LAUNCH DDoS</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="firewall">BYPASS FIREWALL</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="decrypt">DECRYPT PASSWORDS</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="satellite">ACCESS SATELLITE</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="mainframe">SHUTDOWN MAINFRAME</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="ipscan">IP SCANNER</button>
-                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="trace">TRACE ROUTE</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="wifi">BRUTE FORCE WIFI</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="ddos">LAUNCH DDoS</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="firewall">BYPASS FIREWALL</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="decrypt">DECRYPT PASSWORDS</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="satellite">ACCESS SATELLITE</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="mainframe">SHUTDOWN MAINFRAME</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="ipscan">IP SCANNER</button>
+                    <button class="tool-button w-full rounded-lg px-2 py-1 red-text border border-red-500 hover:bg-red-900 matrix-text text-center" data-tool="trace">TRACE ROUTE</button>
                 </div>
                 
                 <div class="mt-4">
@@ -197,7 +204,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex-1 flex flex-col border border-green-500 bg-black bg-opacity-70">
+            <div class="flex-1 flex flex-col rounded-lg border border-green-500 bg-black bg-opacity-15">
                 <div id="terminal-output" class="terminal-output p-4 overflow-y-auto">
                     <p class="matrix-text">SYSTEM INITIALIZED...</p>
                     <p class="matrix-text">WELCOME, <span class="blue-text">ADMIN</span>.</p>
@@ -205,7 +212,7 @@
                     <p class="matrix-text blink">_</p>
                 </div>
                 
-                <div class="p-4 border-t border-green-500 flex items-center">
+                <div class="p-4 border-t border-green-500 rounded-lg flex items-center">
                     <span class="matrix-text mr-2">root@hacktool:~#</span>
                     <input id="command-input" class="command-input flex-1" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
                 </div>
@@ -481,7 +488,7 @@
                         if (password.length > 0) {
                             typeToTerminal('ACCESS GRANTED', 20, function() {
                                 setTimeout(function() {
-                                    typeToTerminal('LOADING CYBER SECURITY TOOL v4.2...', 20, function() {
+                                    typeToTerminal('LOADING CYBER SECURITY TOOL v3.1.0...', 20, function() {
                                         setTimeout(function() {
                                             loginScreen.classList.add('hidden');
                                             mainInterface.classList.remove('hidden');
