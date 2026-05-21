@@ -110,12 +110,12 @@
         
         .tool-button {
             transition: all 0.3s;
-            border: 1px solid var(--hacker-green);
+            border: 1px solid var(--hacker-red);
         }
         
         .tool-button:hover {
             background-color: rgba(0, 255, 0, 0.1);
-            box-shadow: 0 0 10px var(--hacker-green);
+            box-shadow: 0 0 10px var(--hacker-red);
         }
         
         .glitch {
@@ -154,11 +154,11 @@
             <p class="mb-4 matrix-text">SECURE ACCESS REQUIRED</p>
             <div class="mb-4">
                 <label class="block matrix-text mb-2">USERNAME</label>
-                <input type="text" id="username" class="w-full p-2 bg-black border border-green-500 matrix-text" value="admin" readonly>
+                <input type="text" id="username" class="w-full p-2 bg-black border border-green-500 matrix-text" value="Administrator Access" readonly>
             </div>
             <div class="mb-6">
                 <label class="block matrix-text mb-2">PASSWORD</label>
-                <input type="password" id="password" class="w-full p-2 bg-black border border-green-500 matrix-text" placeholder="********">
+                <input type="password" id="password" class="w-full p-2 bg-black border border-green-500 matrix-text" placeholder="Password input...">
             </div>
             <button id="login-btn" class="w-full py-2 bg-green-900 hover:bg-green-800 matrix-text font-bold">AUTHENTICATE</button>
             <p class="text-xs mt-4 matrix-text text-center">WARNING: UNAUTHORIZED ACCESS WILL BE REPORTED</p>
@@ -179,16 +179,16 @@
 
         <div class="flex flex-1 overflow-hidden">
             <div class="w-1/4 pr-4 flex flex-col">
-                <h2 class="text-lg mb-2 matrix-text border-b rounded-sm border-red-500">TOOLS</h2>
+                <h2 class="text-lg mb-2 matrix-text rounded-sm bg-red-500">TOOLS</h2>
                 <div class="space-y-2 overflow-y-auto flex-1">
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="wifi">BRUTE FORCE WIFI</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="ddos">LAUNCH DDoS</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="firewall">BYPASS FIREWALL</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="decrypt">DECRYPT PASSWORDS</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="satellite">ACCESS SATELLITE</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="mainframe">SHUTDOWN MAINFRAME</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="ipscan">IP SCANNER</button>
-                    <button class="tool-button w-full p-2 matrix-text text-left" data-tool="trace">TRACE ROUTE</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="wifi">BRUTE FORCE WIFI</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="ddos">LAUNCH DDoS</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="firewall">BYPASS FIREWALL</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="decrypt">DECRYPT PASSWORDS</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="satellite">ACCESS SATELLITE</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="mainframe">SHUTDOWN MAINFRAME</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="ipscan">IP SCANNER</button>
+                    <button class="tool-button w-full rounded-sm red-text border border-red-500 hover:bg-red-900 matrix-text text-left" data-tool="trace">TRACE ROUTE</button>
                 </div>
                 
                 <div class="mt-4">
